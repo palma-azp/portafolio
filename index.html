@@ -1,0 +1,904 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio de Tonathiu Palma · Desarrollo Web & Marketing</title>
+  <meta name="description" content="Portafolio profesional de Tonathiu Palma: desarrollo web, marketing digital, analítica y diseño. Proyectos, campañas y contacto." />
+  <meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Portafolio · Tonathiu Palma">
+  <meta property="og:description" content="Desarrollo web, marketing digital, analítica y diseño.">
+  <meta property="og:image" content="assets/images/og_preview.png">
+
+  <!-- Icons & Fonts -->
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tonathiu Palma",
+    "url": "https://tu-dominio.com/",
+    "email": "mailto:tonathiupalma@gmail.com",
+    "sameAs": [
+      "https://github.com/tuusuario",
+      "https://www.linkedin.com/in/tuusuario/"
+    ],
+    "jobTitle": "Desarrollador Web & Especialista en Marketing Digital",
+    "knowsAbout": [
+      "HTML","CSS","JavaScript","PHP","WordPress",
+      "SEO","SEM","Analytics","Adobe CC","Meta Ads","Google Ads"
+    ]
+  }
+  </script>
+
+  <script>document.documentElement.classList.remove('no-js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- Header -->
+  <header class="site-header" id="inicio">
+    <canvas id="heroCanvas" aria-hidden="true"></canvas>
+    <div class="container">
+      <a class="brand" href="#inicio" aria-label="Inicio">
+        <span class="brand-mark" aria-hidden="true">◆</span>
+        <span class="brand-text">Tonathiu<span>Palma</span></span>
+      </a>
+
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+        <span class="sr-only">Abrir menú</span>
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+   <nav id="site-nav" class="site-nav" aria-label="Principal">
+  <a href="#sobre-mi">Sobre mí</a>
+  <a href="#experiencia">Experiencia</a>
+  <a href="#habilidades">Habilidades</a>
+  <a href="#kpis">KPIs</a>
+  <a href="#proyectos">Proyectos</a>
+  <a href="#videos">Videos</a>
+  <a href="#contacto" class="cta">Contacto</a>
+
+  <!-- Switch de idioma -->
+  <div class="lang-switch" aria-label="Cambiar idioma">
+    <a href="index.html" class="lang-link is-active" lang="es">ES</a>
+    <span class="lang-sep">/</span>
+    <a href="index-en.html" class="lang-link" lang="en">EN</a>
+  </div>
+
+  <button id="themeBtn" class="icon-btn" aria-pressed="false" title="Cambiar tema">
+    <i class="fa-solid fa-moon"></i>
+  </button>
+</nav>
+
+
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <!-- Hero -->
+    <section class="hero reveal">
+      <div class="container grid-2">
+        <div class="hero-copy">
+  <span class="hero-tag">Freelance · Web · Marketing</span>
+  <h1><span>Mi nombre es</span> Tonathiu Palma</h1>
+          <p>Desarrollador web y especialista en marketing digital. Creo experiencias <strong>rápidas</strong>, <strong>accesibles</strong> y <strong>medibles</strong>.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#proyectos"><i class="fa-solid fa-eye"></i> Ver portafolio</a>
+            <a class="btn ghost" href="#contacto"><i class="fa-solid fa-paper-plane"></i> Contactar</a>
+          </div>
+          <ul class="hero-badges" aria-label="Tecnologías">
+            <li><i class="fa-brands fa-html5"></i> HTML</li>
+            <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+            <li><i class="fa-brands fa-js"></i> JS</li>
+            <li><i class="fa-brands fa-php"></i> PHP</li>
+            <li><i class="fa-brands fa-wordpress"></i> WP</li>
+            <li><i class="fa-brands fa-git-alt"></i> Git</li>
+            <li><i class="fa-brands fa-github"></i> GitHub</li>
+            <li><i class="fa-solid fa-pen-nib"></i> Adobe</li>
+          </ul>
+        </div>
+        <figure class="hero-media">
+          <img src="assets/images/tonathiu.png" alt="Retrato profesional de Tonathiu Palma" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="sobre-mi" class="section reveal">
+      <div class="container grid-2">
+        <div>
+          <h2>Sobre mí</h2>
+          <p>Soy un profesional multidisciplinario con foco en <strong>desarrollo web</strong>, <strong>marketing de rendimiento</strong> y <strong>diseño</strong>. Trabajo con HTML, CSS, JavaScript, PHP, WordPress, Git/GitHub y Adobe CC; integro analítica y SEO/SEM para lograr impacto real.</p>
+          <p><strong>Idiomas:</strong> Español nativo · Inglés básico (en proceso de mejora orientado a contexto profesional).</p>
+          <div class="about-cards">
+            <article class="card">
+              <i class="fa-solid fa-code"></i>
+              <h3>Desarrollo</h3>
+              <p>Sitios rápidos y accesibles, SEO técnico, buenas prácticas.</p>
+            </article>
+            <article class="card">
+              <i class="fa-solid fa-bullseye"></i>
+              <h3>Marketing</h3>
+              <p>KPIs: CPL, CAC, ROAS y crecimiento sostenible.</p>
+            </article>
+            <article class="card">
+              <i class="fa-solid fa-bezier-curve"></i>
+              <h3>Diseño</h3>
+              <p>Sistemas visuales consistentes y usables.</p>
+            </article>
+          </div>
+        </div>
+        <aside class="stats">
+          <div class="stat"><span>10+</span><small>Años de experiencia en contenido</small></div>
+          <div class="stat"><span>50+</span><small>Proyectos implementados</small></div>
+          <div class="stat"><span>100%</span><small>Enfoque a resultados</small></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Experiencia & resultados -->
+    <section id="experiencia" class="section reveal alt">
+      <div class="container grid-2">
+        <div>
+          <h2>Experiencia</h2>
+
+          <article class="xp-item">
+            <h3>Freelance · Marketing digital & Desarrollo web</h3>
+            <p class="xp-meta">2015 – Actualidad · Cancún / Remoto</p>
+            <ul>
+              <li>Diseño y desarrollo de landing pages para cursos, servicios y proyectos educativos.</li>
+              <li>Gestión de campañas en Facebook Ads, Instagram Ads, TikTok Ads y Google Ads con enfoque a CPL y ROAS.</li>
+              <li>Producción de contenido visual (banners, reels, videos, logos) alineado a objetivos de performance.</li>
+            </ul>
+          </article>
+
+          <article class="xp-item">
+            <h3>Dirección y creación de contenido</h3>
+            <p class="xp-meta">+10 años · Contenido, diseño y estrategia</p>
+            <ul>
+              <li>Planificación de calendarios de contenido y campañas para diferentes tipos de negocios.</li>
+              <li>Uso de Adobe Photoshop, Illustrator, Premiere y After Effects para piezas profesionales.</li>
+              <li>Colaboración con equipos comerciales y operativos para alinear objetivos de negocio.</li>
+            </ul>
+          </article>
+        </div>
+
+        <aside class="xp-results">
+          <h3>Resultados destacados</h3>
+          <ul>
+            <li><strong>+30% leads</strong> en campañas de cursos al optimizar segmentación, creativos y landings.</li>
+            <li><strong>–20% CPL</strong> al implementar pruebas A/B en anuncios y formularios.</li>
+            <li><strong>+40% alcance orgánico</strong> con diseño de reels y creativos enfocados en retención.</li>
+            <li>Creación de dashboards en <strong>Excel</strong> y <strong>Power BI</strong> para seguimiento de campañas y alumnos.</li>
+          </ul>
+
+          <h3>Herramientas que utilizo</h3>
+          <div class="tools-grid">
+            <span>Meta Ads</span>
+            <span>Google Ads</span>
+            <span>Google Analytics (GA4)</span>
+            <span>Tag Manager</span>
+            <span>Excel / Google Sheets</span>
+            <span>Power BI</span>
+            <span>Photoshop</span>
+            <span>Illustrator</span>
+            <span>Premiere Pro</span>
+            <span>After Effects</span>
+            <span>WordPress</span>
+            <span>cPanel / Hosting</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades" class="section reveal alt">
+      <div class="container">
+        <h2>Habilidades</h2>
+        <div class="skills">
+          <div class="skill"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
+          <div class="skill"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
+          <div class="skill"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+          <div class="skill"><i class="fa-brands fa-php"></i><span>PHP</span></div>
+          <div class="skill"><i class="fa-brands fa-wordpress"></i><span>WordPress</span></div>
+          <div class="skill"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+          <div class="skill"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
+          <div class="skill"><i class="fa-solid fa-pen-nib"></i><span>Adobe CC</span></div>
+          <div class="skill"><i class="fa-solid fa-chart-line"></i><span>Analítica</span></div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Análisis de KPIs -->
+    <section id="kpis" class="section reveal alt">
+      <div class="container">
+        <h2>Análisis de KPIs de campañas</h2>
+        <p>
+          Monitorizo y analizo los indicadores clave de las campañas para optimizar presupuesto,
+          segmentación y creatividades. Trabajo con datos reales de plataformas como Facebook Ads,
+          Instagram Ads, Google Ads y dashboards en Excel / Power BI.
+        </p>
+
+        <div class="metrics-grid">
+          <!-- Métrica 1 -->
+          <article class="metric-card">
+            <header class="metric-header">
+              <span class="metric-label">Costo por clic</span>
+              <span class="metric-code">CPC</span>
+            </header>
+            <p class="metric-desc">
+              Mide cuánto pagas por cada clic. Lo uso para comparar anuncios, audiencias y ubicaciones,
+              detectando dónde el presupuesto es más eficiente.
+            </p>
+            <ul class="metric-notes">
+              <li>Comparación entre campañas y conjuntos de anuncios.</li>
+              <li>Identificación de creativos caros o poco relevantes.</li>
+            </ul>
+          </article>
+
+          <!-- Métrica 2 -->
+          <article class="metric-card">
+            <header class="metric-header">
+              <span class="metric-label">Costo por lead</span>
+              <span class="metric-code">CPL</span>
+            </header>
+            <p class="metric-desc">
+              Indica cuánto cuesta conseguir cada registro o contacto. Es clave para cursos,
+              servicios y generación de prospectos.
+            </p>
+            <ul class="metric-notes">
+              <li>Relación directa con el precio del producto/curso.</li>
+              <li>Permite ajustar ofertas, segmentación y landings.</li>
+            </ul>
+          </article>
+
+          <!-- Métrica 3 -->
+          <article class="metric-card">
+            <header class="metric-header">
+              <span class="metric-label">Tasa de clics</span>
+              <span class="metric-code">CTR</span>
+            </header>
+            <p class="metric-desc">
+              Porcentaje de personas que hacen clic sobre las impresiones. Me ayuda a evaluar
+              si el mensaje y el diseño están llamando la atención.
+            </p>
+            <ul class="metric-notes">
+              <li>Si el CTR es bajo, pruebo nuevos copies y creativos.</li>
+              <li>Permite detectar fatiga de anuncio y momentos para renovar campañas.</li>
+            </ul>
+          </article>
+
+          <!-- Métrica 4 -->
+          <article class="metric-card">
+            <header class="metric-header">
+              <span class="metric-label">Retorno de inversión publicitaria</span>
+              <span class="metric-code">ROAS</span>
+            </header>
+            <p class="metric-desc">
+              Relación entre lo invertido y lo generado. Permite saber si la campaña es rentable
+              y qué canales aportan más valor.
+            </p>
+            <ul class="metric-notes">
+              <li>Seguimiento por campaña, conjunto y anuncio.</li>
+              <li>Apoyo decisiones de escalar o pausar campañas.</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Mini resumen tipo dashboard -->
+        <div class="metrics-summary">
+          <h3>Cómo trabajo los datos</h3>
+          <ul>
+            <li>Descarga e integración de datos desde Facebook Ads / Google Ads.</li>
+            <li>Tablas dinámicas en Excel / Google Sheets para ver rendimiento por canal.</li>
+            <li>Dashboards en Power BI para visualizar CPL, ROAS y tendencias por periodo.</li>
+            <li>Recomendaciones accionables: subir/bajar presupuesto, cambiar audiencias, test A/B de creativos.</li>
+          </ul>
+        </div>
+
+        <!-- Tabla de ejemplo tipo dashboard -->
+        <div class="metrics-table">
+          <h3>Ejemplo de análisis de campañas</h3>
+          <p class="metrics-hint">
+            Ejemplo ilustrativo con datos simulados para mostrar cómo interpreto los KPIs
+            de cada campaña.
+          </p>
+
+          <div class="metrics-table-wrap" role="region" aria-label="Resumen de campañas">
+            <table>
+              <thead>
+                <tr>
+                  <th>Campaña</th>
+                  <th>Impresiones</th>
+                  <th>Clics</th>
+                  <th>CPC</th>
+                  <th>CPL</th>
+                  <th>CTR</th>
+                  <th>ROAS</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+  <tr>
+    <td>Curso online – leads</td>
+    <td>85,300</td>
+    <td>3,420</td>
+    <td>$2.80</td>
+    <td>$45.00</td>
+    <td>4.0%</td>
+    <td>4.2x</td>
+    <td><span class="badge badge-good">Escalar</span></td>
+  </tr>
+  <tr>
+    <td>Negocio local – awareness</td>
+    <td>120,500</td>
+    <td>2,150</td>
+    <td>$3.10</td>
+    <td>–</td>
+    <td>1.8%</td>
+    <td>–</td>
+    <td><span class="badge badge-watch">Optimizar</span></td>
+  </tr>
+  <tr>
+    <td>Reel ofertas – remarketing</td>
+    <td>32,900</td>
+    <td>1,980</td>
+    <td>$1.95</td>
+    <td>$38.00</td>
+    <td>6.0%</td>
+    <td>5.1x</td>
+    <td><span class="badge badge-great">Top</span></td>
+  </tr>
+</tbody>
+
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+        <!-- Análisis de datos -->
+        <!-- Análisis de datos -->
+    <section id="analitica" class="section reveal">
+      <div class="container">
+
+        <!-- Layout principal: texto + aside -->
+        <div class="grid-2">
+          <div>
+            <h2>Análisis de datos</h2>
+            <p>
+              Además de configurar y optimizar campañas, trabajo el análisis de datos para
+              entender qué funciona, qué no y dónde es mejor invertir el presupuesto.
+              Uso <strong>Excel</strong>, <strong>Google Sheets</strong>, <strong>Power BI</strong>
+              y <strong>Python</strong> para transformar datos en decisiones claras.
+            </p>
+
+            <ul>
+              <li>Construcción de reportes de rendimiento por canal, campaña y creatividad.</li>
+              <li>Uso de tablas dinámicas para analizar CPL, CTR, ROAS y tendencias por periodo.</li>
+              <li>Detección de campañas poco rentables y reasignación de presupuesto.</li>
+              <li>Segmentación de datos por público, dispositivo, ubicación y formato.</li>
+            </ul>
+
+            <p>
+              Mi objetivo es que los datos no se queden en un archivo, sino que sirvan para
+              <strong>tomar decisiones concretas</strong>: qué pausar, qué escalar y qué probar.
+            </p>
+          </div>
+
+          <aside>
+            <article class="card">
+              <h3>Flujo típico de análisis</h3>
+              <ul>
+                <li>1. Exportar datos desde Meta Ads / Google Ads.</li>
+                <li>2. Limpiar y organizar la información en Excel / Sheets.</li>
+                <li>3. Construir vistas por objetivos (leads, ventas, awareness).</li>
+                <li>4. Visualizar en dashboards (Power BI / tablas dinámicas).</li>
+                <li>5. Generar recomendaciones accionables para el siguiente ciclo.</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>Ejemplos de insights</h3>
+              <ul>
+                <li>Identificar horarios y días con mejor rendimiento.</li>
+                <li>Detectar creativos con alto CTR pero CPL elevado.</li>
+                <li>Comparar desempeño entre tipos de públicos (lookalike, intereses, remarketing).</li>
+                <li>Medir impacto de cambios en landings y formularios.</li>
+              </ul>
+            </article>
+          </aside>
+        </div>
+
+        <!-- Caso práctico antes / después -->
+        <div class="metrics-table data-case">
+          <h3>Caso práctico: optimización de campaña</h3>
+          <p class="metrics-hint">
+            Ejemplo basado en campañas reales de cursos, mostrando el impacto del análisis de datos
+            en el costo por lead y el retorno de la inversión.
+          </p>
+
+          <div class="metrics-table-wrap" role="region" aria-label="Comparación antes y después de optimización">
+            <table>
+              <thead>
+                <tr>
+                  <th>Estado</th>
+                  <th>CPL</th>
+                  <th>CTR</th>
+                  <th>ROAS</th>
+                  <th>Acciones clave</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Antes de optimizar</td>
+                  <td>$75.00</td>
+                  <td>1.9%</td>
+                  <td>1.8x</td>
+                  <td>
+                    Segmentación amplia, creativos genéricos,
+                    landing sin pruebas A/B.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Después de optimizar</td>
+                  <td>$45.00</td>
+                  <td>4.0%</td>
+                  <td>4.2x</td>
+                  <td>
+                    Refinar públicos, nuevos copies y creativos,
+                    mejoras en formulario y pruebas A/B en la landing.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Ejemplos de gráficas generadas con Python -->
+       <section class="charts-section ai-analytics">
+  <div class="ai-header">
+    <h3>Ejemplos de gráficas generadas con Python</h3>
+
+    <!-- Chip “IA analizando” -->
+    <div class="ai-chip" aria-label="Simulación de análisis con IA">
+      <span class="ai-dot"></span>
+      <span class="ai-label">Analizador activo</span>
+    </div>
+  </div>
+
+  <p class="metrics-hint">
+    Estas gráficas son ejemplos de análisis realizados con Python (pandas y matplotlib),
+    exportados a imagen para usarlos en reportes y dashboards.
+  </p>
+
+    <p class="ai-status">
+    Procesando datos
+    <span class="ai-dots">
+      <span>.</span><span>.</span><span>.</span>
+    </span>
+  </p>
+
+
+  <!-- aquí siguen tu charts-grid y el <details> con el código tal como ya los tienes -->
+
+
+          <div class="charts-grid">
+            <figure class="chart-card">
+              <!-- Guarda esta imagen como assets/images/charts/cpl_evolucion.png -->
+              <img src="assets/images/charts/cpl_evolucion.png"
+                   alt="Gráfica de línea mostrando la evolución del CPL por mes"
+                   loading="lazy">
+              <figcaption>
+                Evolución del <strong>CPL</strong> por mes antes y después de optimizaciones
+                en segmentación y creativos.
+              </figcaption>
+            </figure>
+
+            <figure class="chart-card">
+              <!-- Guarda esta imagen como assets/images/charts/roas_campanas.png -->
+              <img src="assets/images/charts/roas_campanas.png"
+                   alt="Gráfica de barras comparando el ROAS de varias campañas"
+                   loading="lazy">
+              <figcaption>
+                Comparativa de <strong>ROAS</strong> por campaña para decidir qué escalar
+                y qué pausar.
+              </figcaption>
+            </figure>
+
+            <figure class="chart-card">
+              <!-- Guarda esta imagen como assets/images/charts/ctr_dispositivos.png -->
+              <img src="assets/images/charts/ctr_dispositivos.png"
+                   alt="Gráfico de columnas comparando CTR por tipo de dispositivo"
+                   loading="lazy">
+              <figcaption>
+                <strong>CTR</strong> por dispositivo (móvil vs escritorio) para ajustar
+                pujas y ubicaciones.
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- Código de ejemplo en Python -->
+          <details class="code-toggle">
+            <summary>Ver ejemplo de código en Python</summary>
+            <pre><code class="code-block">
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Datos de ejemplo
+data = {
+    "mes": ["Ene", "Feb", "Mar", "Abr", "May", "Jun"],
+    "cpl_antes": [75, 72, 68, 62, 58, 55],
+    "cpl_despues": [55, 52, 50, 48, 46, 45],
+}
+
+df = pd.DataFrame(data)
+
+# Gráfica de línea CPL antes vs después
+plt.figure(figsize=(6, 4))
+plt.plot(df["mes"], df["cpl_antes"], marker="o", label="Antes")
+plt.plot(df["mes"], df["cpl_despues"], marker="o", label="Después")
+plt.title("Evolución del CPL por mes")
+plt.xlabel("Mes")
+plt.ylabel("CPL ($)")
+plt.legend()
+plt.tight_layout()
+plt.savefig("assets/images/charts/cpl_evolucion.png", dpi=120)
+plt.close()
+            </code></pre>
+          </details>
+        </section>
+
+      </div>
+    </section>
+
+   <!-- Red neuronal de ideas -->
+<section id="neural-output" class="section reveal neural-section">
+  <div class="container grid-2">
+    <div class="neural-copy">
+      <h2>Ideas conectadas por datos</h2>
+      <p>
+        Trabajo tus proyectos como una red: combinando desarrollo web,
+        marketing de rendimiento y análisis de datos para generar
+        ideas accionables, no solo reportes.
+      </p>
+      <div class="neural-phrases">
+        <span class="neural-phrase-label">Output de la IA:</span>
+        <p id="neuralPhrase" class="neural-phrase-line">
+          Configurando red neuronal…
+        </p>
+      </div>
+    </div>
+
+    <div class="neural-visual">
+      <canvas id="neuralCanvas" aria-hidden="true"></canvas>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    <!-- Proyectos con filtros -->
+    <section id="proyectos" class="section reveal">
+      <div class="container">
+        <h2>Proyectos</h2>
+        <div class="filters" role="tablist" aria-label="Filtros de proyectos">
+          <button class="chip is-active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+          <button class="chip" data-filter="web" role="tab" aria-selected="false">Web</button>
+          <button class="chip" data-filter="marketing" role="tab" aria-selected="false">Marketing</button>
+          <button class="chip" data-filter="diseño" role="tab" aria-selected="false">Diseño</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card" data-tags="web" data-title="Landing SEO" data-desc="Landing SEO optimizada con Core Web Vitals." data-demo="#" data-repo="#">
+            <img src="assets/images/seo.png" alt="Landing SEO">
+            <div class="project-content">
+              <h3>Landing SEO</h3>
+              <p>Core Web Vitals, semántica y microdatos.</p>
+              <div class="project-tags"><span>HTML</span><span>CSS</span><span>SEO</span></div>
+              <div class="project-actions">
+                <button class="btn sm open-modal"><i class="fa-regular fa-image"></i> Ver</button>
+                <a class="btn sm ghost" href="#" target="_blank" rel="noopener">Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="web" data-title="Dashboard Analytics" data-desc="Panel de métricas con gráficos y filtros." data-demo="#" data-repo="#">
+            <img src="assets/images/landing.png" alt="Dashboard Analytics">
+            <div class="project-content">
+              <h3>Dashboard Analytics</h3>
+              <p>KPIs de marketing, cohortes y ROAS.</p>
+              <div class="project-tags"><span>JS</span><span>UX</span></div>
+              <div class="project-actions">
+                <button class="btn sm open-modal">Ver</button>
+                <a class="btn sm ghost" href="#" target="_blank" rel="noopener">Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="marketing" data-title="Campaña SEM" data-desc="Estrategia de captación con CPL objetivo." data-demo="#" data-repo="#">
+            <img src="assets/images/sem.png" alt="Campaña SEM">
+            <div class="project-content">
+              <h3>Campaña SEM</h3>
+              <p>Google Ads, SKAGs y analítica.</p>
+              <div class="project-tags"><span>SEM</span><span>KPIs</span></div>
+              <div class="project-actions">
+                <button class="btn sm open-modal">Ver</button>
+                <a class="btn sm ghost" href="#" target="_blank" rel="noopener">Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="diseño" data-title="Brand System" data-desc="Guía de estilo y componentes." data-demo="#" data-repo="#">
+            <img src="assets/images/brand.png" alt="Brand System">
+            <div class="project-content">
+              <h3>Brand System</h3>
+              <p>Identidad visual escalable.</p>
+              <div class="project-tags"><span>Branding</span></div>
+              <div class="project-actions">
+                <button class="btn sm open-modal">Ver</button>
+                <a class="btn sm ghost" href="#" target="_blank" rel="noopener">Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="web" data-title="E-commerce" data-desc="Tienda con checkout optimizado." data-demo="#" data-repo="#">
+            <img src="assets/images/ecommerce.png" alt="E-commerce">
+            <div class="project-content">
+              <h3>E-commerce</h3>
+              <p>Checkout, performance y tracking.</p>
+              <div class="project-tags"><span>UX</span><span>Perf</span></div>
+              <div class="project-actions">
+                <button class="btn sm open-modal">Ver</button>
+                <a class="btn sm ghost" href="#" target="_blank" rel="noopener">Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-tags="marketing" data-title="Email Automation" data-desc="Automatizaciones y nurturing." data-demo="#" data-repo="#">
+            <img src="assets/images/email.png" alt="Email Automation">
+            <div class="project-content">
+              <h3>Email Automation</h3>
+              <p>Flujos, segmentación y reportes.</p>
+              <div class="project-tags"><span>CRM</span><span>Automation</span></div>
+              <div class="project-actions">
+                <button class="btn sm open-modal">Ver</button>
+                <a class="btn sm ghost" href="#" target="_blank" rel="noopener">Demo</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Evolución de diseños -->
+    <section id="disenos" class="section reveal alt">
+      <div class="container">
+        <h2>Evolución de diseños</h2>
+        <p>En esta sección muestro cómo un diseño va evolucionando: desde el boceto inicial hasta la versión final lista para el cliente.</p>
+
+        <div class="designs-grid">
+          <!-- Diseño 1 -->
+          <article class="design-card">
+            <header class="design-header">
+              <h3>Logo Wellness Cursos</h3>
+              <p>Boceto → refinamiento → versión final.</p>
+            </header>
+
+            <div class="design-carousel" data-design="wellness-logo">
+              <button class="carousel-btn prev" type="button" aria-label="Ver versión anterior">‹</button>
+
+              <div class="carousel-viewport">
+                <div class="carousel-track">
+                  <img src="assets/images/talla_grand.jpg" alt="Boceto inicial del logo Wellness Cursos" class="is-active">
+                  <img src="assets/images/practica_rebook.png" alt="Versión intermedia del logo Wellness Cursos">
+                  <img src="assets/images/center_gym_fb_luxury_1080x1350.png" alt="Versión final del logo Wellness Cursos">
+                </div>
+              </div>
+
+              <button class="carousel-btn next" type="button" aria-label="Ver siguiente versión">›</button>
+            </div>
+
+            <div class="carousel-dots" role="tablist" aria-label="Etapas del diseño Wellness Cursos">
+              <button class="dot is-active" type="button" role="tab" aria-selected="true" data-index="0">Boceto</button>
+              <button class="dot" type="button" role="tab" aria-selected="false" data-index="1">Refinando</button>
+              <button class="dot" type="button" role="tab" aria-selected="false" data-index="2">Final</button>
+            </div>
+          </article>
+
+          <!-- Diseño 2 -->
+          <!-- Diseño 2 -->
+<article class="design-card">
+  <header class="design-header">
+    <h3>Banner para campaña en redes sociales</h3>
+    <p>Composición, color y retoque final.</p>
+  </header>
+
+  <div class="design-carousel" data-design="banner-masaje">
+    <button class="carousel-btn prev" type="button" aria-label="Ver versión anterior">‹</button>
+
+    <div class="carousel-viewport">
+      <div class="carousel-track">
+        <img src="assets/images/g-1.jpg"
+             alt="Versión inicial del banner para campaña en redes sociales"
+             class="is-active">
+        <img src="assets/images/g-2.png"
+             alt="Versión intermedia del banner para campaña en redes sociales">
+        <img src="assets/images/g-3.png"
+             alt="Versión final del banner para campaña en redes sociales">
+      </div>
+    </div>
+
+    <button class="carousel-btn next" type="button" aria-label="Ver siguiente versión">›</button>
+  </div>
+
+  <div class="carousel-dots" role="tablist" aria-label="Etapas del diseño del banner para redes sociales">
+    <button class="dot is-active" type="button" role="tab" aria-selected="true" data-index="0">Boceto</button>
+    <button class="dot" type="button" role="tab" aria-selected="false" data-index="1">Color</button>
+    <button class="dot" type="button" role="tab" aria-selected="false" data-index="2">Final</button>
+  </div>
+</article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Videos -->
+    <!-- Videos -->
+<section id="videos" class="section reveal alt">
+  <div class="container">
+    <h2>Videos</h2>
+    <p>
+      Aquí muestro algunos de los videos que edito con Adobe Premiere Pro,
+      desde piezas promocionales hasta contenido para cursos y redes sociales.
+    </p>
+
+    <div class="video-grid">
+      <!-- Video 1: YouTube -->
+      <article class="video-card">
+        <h3>Promo curso online</h3>
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID_1"
+            title="Promo curso online"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p class="video-desc">
+          Video promocional para campaña en redes sociales, enfocado en la experiencia del alumno.
+        </p>
+      </article>
+
+      <!-- Video 2: YouTube -->
+      <article class="video-card">
+        <h3>Reel para negocio local</h3>
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID_2"
+            title="Reel para negocio local"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p class="video-desc">
+          Reel vertical pensado para Instagram y TikTok, mostrando el ambiente de un negocio local.
+        </p>
+      </article>
+
+      <!-- Video 3: archivo MP4 propio -->
+      <article class="video-card">
+        <h3>Intro para cursos online</h3>
+        <div class="video-frame">
+          <video controls preload="metadata">
+            <source src="assets/videos/intro-curso.mp4" type="video/mp4">
+            Tu navegador no soporta el video HTML5.
+          </video>
+        </div>
+        <p class="video-desc">
+          Intro animada para los módulos del curso, con logo y transición suave.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contacto -->
+    <!-- Contacto -->
+<section id="contacto" class="section reveal alt">
+  <div class="container grid-2">
+    <div>
+      <h2>Contacto</h2>
+      <p>¿Tienes un proyecto en mente? Escríbeme y construyamos algo increíble.</p>
+      <ul class="contact-list">
+        <li>
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:tonathiupalma@gmail.com">tonathiupalma@gmail.com</a>
+        </li>
+        <li>
+          <i class="fa-brands fa-whatsapp"></i>
+          <a href="https://wa.me/52XXXXXXXXXX" target="_blank" rel="noopener">
+            WhatsApp · Escríbeme directamente
+          </a>
+        </li>
+        <li><i class="fa-brands fa-linkedin"></i> linkedin.com/in/tuusuario</li>
+        <li><i class="fa-brands fa-github"></i> github.com/tuusuario</li>
+      </ul>
+    </div>
+    <form class="contact-form" action="#" method="post" novalidate>
+      <label>
+        <span>Nombre</span>
+        <input type="text" name="name" required placeholder="Tu nombre" />
+        <small class="error" aria-live="polite"></small>
+      </label>
+      <label>
+        <span>Email</span>
+        <input type="email" name="email" required placeholder="tunombre@email.com" />
+        <small class="error" aria-live="polite"></small>
+      </label>
+      <label class="full">
+        <span>Mensaje</span>
+        <textarea name="message" rows="5" required placeholder="Cuéntame sobre tu proyecto"></textarea>
+        <small class="error" aria-live="polite"></small>
+      </label>
+      <button type="submit" class="btn full">
+        <i class="fa-solid fa-paper-plane"></i> Enviar mensaje
+      </button>
+    </form>
+  </div>
+</section>
+
+  </main>
+
+  <button id="toTop" class="to-top" aria-label="Ir arriba" hidden><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- Modal de proyectos -->
+  <dialog class="modal" id="projectModal" aria-label="Vista de proyecto">
+    <div class="modal-card" role="document">
+      <div class="modal-head">
+        <h4 class="modal-title">Título del proyecto</h4>
+        <button class="modal-close" aria-label="Cerrar">×</button>
+      </div>
+      <div class="modal-body">
+        <img class="modal-img" src="" alt="" />
+        <p class="modal-desc">Descripción del proyecto…</p>
+        <div class="modal-actions">
+          <a href="#" target="_blank" rel="noopener" class="btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver demo</a>
+          <a href="#" target="_blank" rel="noopener" class="btn ghost"><i class="fa-brands fa-github"></i> Repositorio</a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Tonathiu Palma. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

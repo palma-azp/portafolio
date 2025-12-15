@@ -1,0 +1,297 @@
+/* ====== Tokens base (alineado con tu portafolio) ====== */
+:root{
+  --bg:#ffffff;
+  --paper:#f6f7f9;
+  --ink:#0f1115;
+  --muted:#6b7280;
+  --brand:#b8860b;
+  --ring:rgba(184,134,11,.28);
+  --radius:16px;
+  --container:1100px;
+  --fs-h2:clamp(22px, 3.4vw, 30px);
+  --ease:cubic-bezier(.22,.8,.25,1);
+  --border-soft:rgba(148,163,184,.30);
+}
+
+/* ====== Reset y base ====== */
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+html,body{
+  margin:0;
+  padding:0;
+  min-height:100%;
+}
+
+body{
+  font:400 16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:radial-gradient(circle at top, rgba(15,23,42,.05) 0, var(--bg) 60%);
+  color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+/* ====== Layout general ====== */
+main{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px 16px 48px;
+}
+
+.container{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:0 20px;
+}
+
+/* ====== Sección ====== */
+.section{
+  padding:28px 0 30px;
+}
+
+.section.alt{
+  position:relative;
+  background:var(--paper);
+  border-radius:22px;
+  box-shadow:0 16px 40px rgba(15,23,42,.06);
+  overflow:hidden;
+}
+
+/* Brillo suave animado de fondo */
+.section.alt::before{
+  content:"";
+  position:absolute;
+  inset:-40%;
+  background:
+    radial-gradient(circle at top left, rgba(248,250,252,0) 0, transparent 45%),
+    radial-gradient(circle at top right, rgba(248,250,252,0) 0, transparent 45%),
+    conic-gradient(from 210deg,
+      transparent 0 15%,
+      rgba(184,134,11,.18) 15% 22%,
+      transparent 22% 40%,
+      rgba(234,179,8,.18) 40% 46%,
+      transparent 46% 100%);
+  opacity:0;
+  transition:opacity .9s var(--ease);
+  pointer-events:none;
+}
+
+.section.alt.reveal.visible::before{
+  opacity:.35;
+}
+
+.section h2{
+  font-size:var(--fs-h2);
+  margin:0 0 18px;
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+
+/* Subrayado animado del título */
+.section h2::after{
+  content:"";
+  height:2px;
+  width:64px;
+  border-radius:999px;
+  background:linear-gradient(90deg, var(--brand), rgba(184,134,11,.25));
+  transform-origin:left;
+  transform:scaleX(0);
+  transition:transform .6s var(--ease) .05s;
+}
+
+.section.reveal.visible h2::after{
+  transform:scaleX(1);
+}
+
+/* ====== Grid del resumen ====== */
+.resume-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.8fr) minmax(0,1.4fr);
+  gap:28px;
+  align-items:flex-start;
+}
+
+/* Columna izquierda */
+.resume-main h3{
+  margin:16px 0 8px;
+  font-size:1.05rem;
+}
+
+.resume-main h3:first-of-type{
+  margin-top:6px;
+}
+
+.resume-main p{
+  margin:0 0 10px;
+}
+
+/* Listas */
+.resume-list{
+  margin:4px 0 12px;
+  padding-left:20px;
+}
+
+.resume-list li{
+  margin-bottom:6px;
+  color:var(--muted);
+  font-size:.95rem;
+
+  /* animación por elemento */
+  opacity:0;
+  transform:translateY(8px);
+  transition:
+    opacity .45s var(--ease),
+    transform .45s var(--ease);
+}
+
+.resume-list.small li{
+  margin-bottom:3px;
+  font-size:.88rem;
+}
+
+strong{
+  color:var(--brand);
+  font-weight:600;
+}
+
+/* Columna derecha (aside) */
+.resume-aside{
+  background:var(--bg);
+  border-radius:var(--radius);
+  padding:14px 18px 14px;
+  border:1px solid var(--border-soft);
+  box-shadow:0 14px 36px rgba(15,23,42,.08);
+  position:relative;
+  overflow:hidden;
+}
+
+/* Halo dorado sutil */
+.resume-aside::before{
+  content:"";
+  position:absolute;
+  inset:-50%;
+  background:radial-gradient(circle at top, rgba(184,134,11,.26) 0, transparent 46%);
+  opacity:0;
+  transition:opacity .9s var(--ease);
+  pointer-events:none;
+}
+
+.section.reveal.visible .resume-aside::before{
+  opacity:.5;
+}
+
+.resume-aside h3{
+  margin:0 0 8px;
+  font-size:1.05rem;
+
+  opacity:0;
+  transform:translateY(8px);
+  transition:opacity .45s var(--ease), transform .45s var(--ease);
+}
+
+.resume-aside h4{
+  margin:10px 0 4px;
+  font-size:.9rem;
+  color:var(--muted);
+
+  opacity:0;
+  transform:translateY(8px);
+  transition:opacity .4s var(--ease), transform .4s var(--ease);
+}
+
+/* ====== Animación reveal (entrada general de la tarjeta) ====== */
+.reveal{
+  opacity:0;
+  transform:translateY(18px) scale(.98);
+  transition:
+    opacity .6s var(--ease),
+    transform .6s var(--ease),
+    box-shadow .4s var(--ease);
+}
+
+.reveal.visible{
+  opacity:1;
+  transform:translateY(0) scale(1);
+}
+
+/* Cuando la sección está visible, revelamos contenido interior con efecto escalonado */
+.section.reveal.visible .resume-main p{
+  opacity:1;
+}
+
+.section.reveal.visible .resume-aside h3,
+.section.reveal.visible .resume-aside h4,
+.section.reveal.visible .resume-list li{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Delays escalonados para stagger */
+.section.reveal.visible .stagger-0{ transition-delay:.05s; }
+.section.reveal.visible .stagger-1{ transition-delay:.09s; }
+.section.reveal.visible .stagger-2{ transition-delay:.13s; }
+.section.reveal.visible .stagger-3{ transition-delay:.17s; }
+.section.reveal.visible .stagger-4{ transition-delay:.21s; }
+.section.reveal.visible .stagger-5{ transition-delay:.25s; }
+.section.reveal.visible .stagger-6{ transition-delay:.29s; }
+.section.reveal.visible .stagger-7{ transition-delay:.33s; }
+.section.reveal.visible .stagger-8{ transition-delay:.37s; }
+.section.reveal.visible .stagger-9{ transition-delay:.41s; }
+
+/* Hover sutil en escritorio */
+@media (hover:hover){
+  .section.alt.reveal.visible:hover{
+    box-shadow:0 22px 60px rgba(15,23,42,.12);
+  }
+}
+
+/* ====== Header simple para volver al portafolio (mismo color que index) ====== */
+.resume-header{
+  padding:16px 0 8px;
+}
+
+.back-link{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:.9rem;
+  font-weight:500;
+  text-decoration:none;
+  color:var(--ink);              /* MISMO COLOR DE LINKS DEL INDEX */
+  padding:6px 10px;
+  border-radius:12px;
+  background:transparent;
+  transition:
+    background .25s var(--ease),
+    color .25s var(--ease),
+    transform .2s var(--ease);
+}
+
+.back-link:hover{
+  background:var(--paper);        /* Igual que hover de .site-nav a */
+  color:var(--ink);
+  transform:translateY(-1px);
+}
+
+/* ====== Responsive ====== */
+@media (max-width:900px){
+  main{
+    padding:24px 10px 32px;
+  }
+
+  .container{
+    padding:0 14px;
+  }
+
+  .resume-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+}
