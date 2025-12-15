@@ -1,4 +1,5 @@
 :root{
+<<<<<<< HEAD
   /* Colores base inspirados en el cartel */
   --bg:#f7f3e8;            /* fondo papel cálido */
   --paper:#efe3c8;         /* paneles y secciones */
@@ -7,11 +8,20 @@
   --brand:#f2b705;         /* amarillo protagonista */
   --brand-accent:#e13b3b;  /* rojo acento */
   --ring: rgba(225,59,59,.25);
+=======
+  --bg:#ffffff;
+  --paper:#f6f7f9;
+  --ink:#0f1115;
+  --muted:#6b7280;
+  --brand:#b8860b;
+  --ring: rgba(184,134,11,.28);
+>>>>>>> 4144d5602e85c7b2967893b9bb40bf35f3a6ceb5
   --radius:16px;
   --container:1100px;
   --fs-h1: clamp(28px, 5vw, 42px);
   --fs-h2: clamp(22px, 3.4vw, 30px);
 }
+<<<<<<< HEAD
 
 @media (prefers-color-scheme: dark){
   :root{
@@ -29,6 +39,17 @@
   }
 }
 
+=======
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0b0d12;
+    --paper:#111419;
+    --ink:#e5e7eb;
+    --muted:#9aa3af;
+    --ring: rgba(184,134,11,.35);
+  }
+}
+>>>>>>> 4144d5602e85c7b2967893b9bb40bf35f3a6ceb5
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
@@ -47,6 +68,7 @@ img{max-width:100%;display:block}
 .skip-link:focus{left:10px;top:10px;width:auto;height:auto;background:#fff;color:#000;padding:8px 12px;border-radius:8px;z-index:999}
 
 /* Header */
+<<<<<<< HEAD
 /*.site-header{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--bg) 92%, transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid color-mix(in srgb, var(--ink) 8%, transparent)}
 /* Override para que el header sea sólido y no se vea el robot detrás */
 .site-header{
@@ -67,6 +89,9 @@ img{max-width:100%;display:block}
   backdrop-filter:none;
 }
 
+=======
+.site-header{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--bg) 92%, transparent);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid color-mix(in srgb, var(--ink) 8%, transparent)}
+>>>>>>> 4144d5602e85c7b2967893b9bb40bf35f3a6ceb5
 .site-header .container{display:flex;align-items:center;justify-content:space-between;height:64px}
 .brand{display:inline-flex;align-items:center;gap:10px;font-weight:800;color:var(--ink);text-decoration:none}
 .brand .brand-mark{color:var(--brand)}
@@ -93,9 +118,12 @@ img{max-width:100%;display:block}
 .hero-media{aspect-ratio:1/1;border-radius:24px;background:linear-gradient(135deg, color-mix(in srgb, var(--paper) 88%, var(--bg)), var(--paper));padding:18px;border:1px solid color-mix(in srgb, var(--ink) 8%, transparent)}
 .hero-media img{width:100%;height:100%;object-fit:cover;border-radius:16px}
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 4144d5602e85c7b2967893b9bb40bf35f3a6ceb5
 /* Section */
 .section{padding:64px 0}
 .section.alt{background:var(--paper)}
@@ -181,6 +209,7 @@ img{max-width:100%;display:block}
   .projects-grid{grid-template-columns:1fr}
   .contact-form{grid-template-columns:1fr}
 }
+<<<<<<< HEAD
 
 /* ======== Diseños / Carrusel de evolución ======== */
 .designs-grid{
@@ -1085,3 +1114,5 @@ img{max-width:100%;display:block}
   height:100%;
   display:block;
 }
+=======
+>>>>>>> 4144d5602e85c7b2967893b9bb40bf35f3a6ceb5

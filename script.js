@@ -93,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (outside) modal.close();
   });
 
+<<<<<<< HEAD
     // Carruseles de evolución de diseños
   const designCarousels = $$('.design-carousel');
 
@@ -134,6 +135,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
+=======
+>>>>>>> 4144d5602e85c7b2967893b9bb40bf35f3a6ceb5
   // Form validation (client side)
   const form = $('.contact-form');
   form.addEventListener('submit', (e) => {
@@ -158,6 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+<<<<<<< HEAD
 
 // ===== Ocultar "Procesando datos..." después de que la sección IA sea visible =====
 document.addEventListener("DOMContentLoaded", () => {
@@ -774,3 +778,5 @@ document.addEventListener('DOMContentLoaded', () => {
     draw();
   }
 });
+=======
+>>>>>>> 4144d5602e85c7b2967893b9bb40bf35f3a6ceb5
