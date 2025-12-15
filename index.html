@@ -11,11 +11,20 @@
   <meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 
+  <link rel="canonical" href="https://palmazpeitia-png.github.io/portafolio/" />
+
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Portafolio · Tonathiu Palma">
   <meta property="og:description" content="Desarrollo web, marketing digital, analítica y diseño.">
+  <meta property="og:url" content="https://palmazpeitia-png.github.io/portafolio/">
   <meta property="og:image" content="assets/images/og_preview.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Portafolio · Tonathiu Palma">
+  <meta name="twitter:description" content="Desarrollo web, marketing digital, analítica y diseño.">
+  <meta name="twitter:image" content="assets/images/og_preview.png">
 
   <!-- Icons & Fonts -->
   <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
@@ -25,7 +34,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css" />
 
-  <!-- JSON-LD Schema (solo UNO) -->
+  <!-- JSON-LD Schema (solo 1) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,7 +49,8 @@
     "jobTitle": "Marketing Digital & Desarrollo Web",
     "knowsAbout": [
       "HTML","CSS","JavaScript","PHP","WordPress",
-      "SEO","SEM","Analytics","Adobe CC","Meta Ads","Google Ads"
+      "SEO","SEM","Analytics","Adobe CC","Meta Ads","Google Ads",
+      "Excel","Power BI","Google Tag Manager","GA4"
     ]
   }
   </script>
@@ -53,35 +63,38 @@
 
   <!-- Header -->
   <header class="site-header" id="inicio">
+    <canvas id="heroCanvas" aria-hidden="true"></canvas>
+
     <div class="container">
       <a class="brand" href="#inicio" aria-label="Inicio">
         <span class="brand-mark" aria-hidden="true">◆</span>
         <span class="brand-text">Tonathiu<span>Palma</span></span>
       </a>
 
-      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" type="button">
         <span class="sr-only">Abrir menú</span>
         <i class="fa-solid fa-bars"></i>
       </button>
 
-      <!-- SOLO UN NAV (antes tenías 2 con el mismo id) -->
+      <!-- ✅ Solo UN nav con id único -->
       <nav id="site-nav" class="site-nav" aria-label="Principal">
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#experiencia">Experiencia</a>
         <a href="#habilidades">Habilidades</a>
         <a href="#kpis">KPIs</a>
+        <a href="#analitica">Analítica</a>
         <a href="#proyectos">Proyectos</a>
+        <a href="#disenos">Diseños</a>
         <a href="#videos">Videos</a>
         <a href="#contacto" class="cta">Contacto</a>
 
-        <!-- Switch de idioma -->
         <div class="lang-switch" aria-label="Cambiar idioma">
           <a href="index.html" class="lang-link is-active" lang="es">ES</a>
-          <span class="lang-sep" aria-hidden="true">/</span>
+          <span class="lang-sep">/</span>
           <a href="index-en.html" class="lang-link" lang="en">EN</a>
         </div>
 
-        <button id="themeBtn" class="icon-btn" aria-pressed="false" title="Cambiar tema">
+        <button id="themeBtn" class="icon-btn" aria-pressed="false" title="Cambiar tema" type="button">
           <i class="fa-solid fa-moon"></i>
         </button>
       </nav>
@@ -89,23 +102,15 @@
   </header>
 
   <main id="contenido" tabindex="-1">
-
     <!-- Hero -->
     <section class="hero reveal">
-      <!-- El canvas VA en el hero (no en el header) -->
-      <canvas id="heroCanvas" aria-hidden="true"></canvas>
-
       <div class="container grid-2">
         <div class="hero-copy">
           <span class="hero-tag">Freelance · Web · Marketing</span>
-
-          <!-- SOLO UN H1 (antes tenías 2) -->
+          <!-- ✅ Solo 1 h1 -->
           <h1><span>Mi nombre es</span> Tonathiu Palma</h1>
 
-          <p>
-            Desarrollador web y especialista en marketing digital. Creo experiencias
-            <strong>rápidas</strong>, <strong>accesibles</strong> y <strong>medibles</strong>.
-          </p>
+          <p>Desarrollador web y especialista en marketing digital. Creo experiencias <strong>rápidas</strong>, <strong>accesibles</strong> y <strong>medibles</strong>.</p>
 
           <div class="hero-actions">
             <a class="btn" href="#proyectos"><i class="fa-solid fa-eye"></i> Ver portafolio</a>
@@ -125,7 +130,7 @@
         </div>
 
         <figure class="hero-media">
-          <!-- SOLO UNA imagen (antes venían 2 iguales) -->
+          <!-- ✅ Solo 1 imagen -->
           <img src="assets/images/tonathiu.png" alt="Retrato profesional de Tonathiu Palma" />
         </figure>
       </div>
@@ -136,12 +141,7 @@
       <div class="container grid-2">
         <div>
           <h2>Sobre mí</h2>
-          <p>
-            Soy un profesional multidisciplinario con foco en <strong>desarrollo web</strong>,
-            <strong>marketing de rendimiento</strong> y <strong>diseño</strong>. Trabajo con HTML,
-            CSS, JavaScript, PHP, WordPress, Git/GitHub y Adobe CC; integro analítica y SEO/SEM
-            para lograr impacto real.
-          </p>
+          <p>Soy un profesional multidisciplinario con foco en <strong>desarrollo web</strong>, <strong>marketing de rendimiento</strong> y <strong>diseño</strong>. Trabajo con HTML, CSS, JavaScript, PHP, WordPress, Git/GitHub y Adobe CC; integro analítica y SEO/SEM para lograr impacto real.</p>
           <p><strong>Idiomas:</strong> Español nativo · Inglés básico (en proceso de mejora orientado a contexto profesional).</p>
 
           <div class="about-cards">
@@ -201,26 +201,18 @@
         <aside class="xp-results">
           <h3>Resultados destacados</h3>
           <ul>
-            <li><strong>+30% leads</strong> en campañas de cursos al optimizar segmentación, creativos y landings.</li>
-            <li><strong>–20% CPL</strong> al implementar pruebas A/B en anuncios y formularios.</li>
-            <li><strong>+40% alcance orgánico</strong> con diseño de reels y creativos enfocados en retención.</li>
-            <li>Creación de dashboards en <strong>Excel</strong> y <strong>Power BI</strong> para seguimiento de campañas y alumnos.</li>
+            <li><strong>+30% leads</strong> optimizando segmentación, creativos y landings.</li>
+            <li><strong>–20% CPL</strong> aplicando pruebas A/B en anuncios y formularios.</li>
+            <li><strong>+40% alcance orgánico</strong> con reels y creativos enfocados en retención.</li>
+            <li>Dashboards en <strong>Excel</strong> y <strong>Power BI</strong> para seguimiento.</li>
           </ul>
 
-          <h3>Herramientas que utilizo</h3>
+          <h3>Herramientas</h3>
           <div class="tools-grid">
-            <span>Meta Ads</span>
-            <span>Google Ads</span>
-            <span>Google Analytics (GA4)</span>
-            <span>Tag Manager</span>
-            <span>Excel / Google Sheets</span>
-            <span>Power BI</span>
-            <span>Photoshop</span>
-            <span>Illustrator</span>
-            <span>Premiere Pro</span>
-            <span>After Effects</span>
-            <span>WordPress</span>
-            <span>cPanel / Hosting</span>
+            <span>Meta Ads</span><span>Google Ads</span><span>GA4</span><span>Tag Manager</span>
+            <span>Excel / Sheets</span><span>Power BI</span>
+            <span>Photoshop</span><span>Illustrator</span><span>Premiere</span><span>After Effects</span>
+            <span>WordPress</span><span>cPanel</span>
           </div>
         </aside>
       </div>
@@ -248,134 +240,53 @@
     <section id="kpis" class="section reveal alt">
       <div class="container">
         <h2>Análisis de KPIs de campañas</h2>
-        <p>
-          Monitorizo y analizo los indicadores clave de las campañas para optimizar presupuesto,
-          segmentación y creatividades. Trabajo con datos reales de plataformas como Facebook Ads,
-          Instagram Ads, Google Ads y dashboards en Excel / Power BI.
-        </p>
+        <p>Monitorizo y analizo indicadores clave para optimizar presupuesto, segmentación y creatividades. Trabajo con datos de Meta Ads, Google Ads y dashboards en Excel / Power BI.</p>
 
         <div class="metrics-grid">
           <article class="metric-card">
-            <header class="metric-header">
-              <span class="metric-label">Costo por clic</span>
-              <span class="metric-code">CPC</span>
-            </header>
-            <p class="metric-desc">
-              Mide cuánto pagas por cada clic. Lo uso para comparar anuncios, audiencias y ubicaciones.
-            </p>
-            <ul class="metric-notes">
-              <li>Comparación entre campañas y conjuntos de anuncios.</li>
-              <li>Identificación de creativos caros o poco relevantes.</li>
-            </ul>
+            <header class="metric-header"><span class="metric-label">Costo por clic</span><span class="metric-code">CPC</span></header>
+            <p class="metric-desc">Cuánto pagas por cada clic. Lo uso para comparar anuncios, audiencias y ubicaciones.</p>
+            <ul class="metric-notes"><li>Comparación entre campañas y conjuntos.</li><li>Detección de creativos caros.</li></ul>
           </article>
 
           <article class="metric-card">
-            <header class="metric-header">
-              <span class="metric-label">Costo por lead</span>
-              <span class="metric-code">CPL</span>
-            </header>
-            <p class="metric-desc">
-              Indica cuánto cuesta conseguir cada registro o contacto. Es clave para cursos y servicios.
-            </p>
-            <ul class="metric-notes">
-              <li>Relación directa con el precio del producto/curso.</li>
-              <li>Permite ajustar ofertas, segmentación y landings.</li>
-            </ul>
+            <header class="metric-header"><span class="metric-label">Costo por lead</span><span class="metric-code">CPL</span></header>
+            <p class="metric-desc">Cuánto cuesta conseguir cada registro o contacto. Clave para cursos y servicios.</p>
+            <ul class="metric-notes"><li>Relaciono CPL con ticket.</li><li>Ajusto oferta, segmentación y landing.</li></ul>
           </article>
 
           <article class="metric-card">
-            <header class="metric-header">
-              <span class="metric-label">Tasa de clics</span>
-              <span class="metric-code">CTR</span>
-            </header>
-            <p class="metric-desc">
-              Porcentaje de personas que hacen clic sobre las impresiones. Evalúa mensaje y diseño.
-            </p>
-            <ul class="metric-notes">
-              <li>Si el CTR es bajo, pruebo nuevos copies y creativos.</li>
-              <li>Detecto fatiga y momentos para renovar campañas.</li>
-            </ul>
+            <header class="metric-header"><span class="metric-label">Tasa de clics</span><span class="metric-code">CTR</span></header>
+            <p class="metric-desc">Porcentaje de clics sobre impresiones. Me dice si copy + diseño atrapan.</p>
+            <ul class="metric-notes"><li>Si baja: renuevo creativos.</li><li>Detecta fatiga.</li></ul>
           </article>
 
           <article class="metric-card">
-            <header class="metric-header">
-              <span class="metric-label">Retorno de inversión publicitaria</span>
-              <span class="metric-code">ROAS</span>
-            </header>
-            <p class="metric-desc">
-              Relación entre lo invertido y lo generado. Permite ver rentabilidad y escalar.
-            </p>
-            <ul class="metric-notes">
-              <li>Seguimiento por campaña, conjunto y anuncio.</li>
-              <li>Decisiones de escalar o pausar campañas.</li>
-            </ul>
+            <header class="metric-header"><span class="metric-label">Retorno publicitario</span><span class="metric-code">ROAS</span></header>
+            <p class="metric-desc">Relación entre inversión y ventas. Decide escalar o pausar.</p>
+            <ul class="metric-notes"><li>Seguimiento por campaña y anuncio.</li><li>Priorizo lo rentable.</li></ul>
           </article>
-        </div>
-
-        <div class="metrics-summary">
-          <h3>Cómo trabajo los datos</h3>
-          <ul>
-            <li>Descarga e integración de datos desde Facebook Ads / Google Ads.</li>
-            <li>Tablas dinámicas en Excel / Sheets.</li>
-            <li>Dashboards en Power BI.</li>
-            <li>Acciones: subir/bajar presupuesto, ajustar audiencias, test A/B.</li>
-          </ul>
         </div>
 
         <div class="metrics-table">
           <h3>Ejemplo de análisis de campañas</h3>
-          <p class="metrics-hint">Ejemplo ilustrativo con datos simulados para mostrar interpretación de KPIs.</p>
+          <p class="metrics-hint">Datos simulados para mostrar lectura de KPIs.</p>
 
           <div class="metrics-table-wrap" role="region" aria-label="Resumen de campañas">
             <table>
               <thead>
                 <tr>
-                  <th>Campaña</th>
-                  <th>Impresiones</th>
-                  <th>Clics</th>
-                  <th>CPC</th>
-                  <th>CPL</th>
-                  <th>CTR</th>
-                  <th>ROAS</th>
-                  <th>Estado</th>
+                  <th>Campaña</th><th>Impresiones</th><th>Clics</th><th>CPC</th><th>CPL</th><th>CTR</th><th>ROAS</th><th>Estado</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Curso online – leads</td>
-                  <td>85,300</td>
-                  <td>3,420</td>
-                  <td>$2.80</td>
-                  <td>$45.00</td>
-                  <td>4.0%</td>
-                  <td>4.2x</td>
-                  <td><span class="badge badge-good">Escalar</span></td>
-                </tr>
-                <tr>
-                  <td>Negocio local – awareness</td>
-                  <td>120,500</td>
-                  <td>2,150</td>
-                  <td>$3.10</td>
-                  <td>–</td>
-                  <td>1.8%</td>
-                  <td>–</td>
-                  <td><span class="badge badge-watch">Optimizar</span></td>
-                </tr>
-                <tr>
-                  <td>Reel ofertas – remarketing</td>
-                  <td>32,900</td>
-                  <td>1,980</td>
-                  <td>$1.95</td>
-                  <td>$38.00</td>
-                  <td>6.0%</td>
-                  <td>5.1x</td>
-                  <td><span class="badge badge-great">Top</span></td>
-                </tr>
+                <tr><td>Curso online – leads</td><td>85,300</td><td>3,420</td><td>$2.80</td><td>$45.00</td><td>4.0%</td><td>4.2x</td><td><span class="badge badge-good">Escalar</span></td></tr>
+                <tr><td>Negocio local – awareness</td><td>120,500</td><td>2,150</td><td>$3.10</td><td>–</td><td>1.8%</td><td>–</td><td><span class="badge badge-watch">Optimizar</span></td></tr>
+                <tr><td>Reel ofertas – remarketing</td><td>32,900</td><td>1,980</td><td>$1.95</td><td>$38.00</td><td>6.0%</td><td>5.1x</td><td><span class="badge badge-great">Top</span></td></tr>
               </tbody>
             </table>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -385,69 +296,30 @@
         <div class="grid-2">
           <div>
             <h2>Análisis de datos</h2>
-            <p>
-              Uso <strong>Excel</strong>, <strong>Google Sheets</strong>, <strong>Power BI</strong>
-              y <strong>Python</strong> para transformar datos en decisiones claras.
-            </p>
+            <p>Uso <strong>Excel</strong>, <strong>Sheets</strong>, <strong>Power BI</strong> y <strong>Python</strong> para convertir datos en decisiones claras.</p>
             <ul>
-              <li>Reportes por canal, campaña y creatividad.</li>
-              <li>Tablas dinámicas: CPL, CTR, ROAS y tendencias.</li>
+              <li>Reportes por canal/campaña/creativo.</li>
+              <li>Tablas dinámicas para CPL, CTR, ROAS y tendencias.</li>
               <li>Detección de campañas poco rentables.</li>
-              <li>Segmentación por público, dispositivo, ubicación y formato.</li>
+              <li>Segmentación por público, dispositivo y formato.</li>
             </ul>
           </div>
 
           <aside>
             <article class="card">
-              <h3>Flujo típico de análisis</h3>
+              <h3>Flujo típico</h3>
               <ul>
-                <li>1. Exportar datos Meta / Google Ads.</li>
-                <li>2. Limpiar en Excel / Sheets.</li>
-                <li>3. Vistas por objetivo (leads, ventas, awareness).</li>
-                <li>4. Visualizar en dashboards.</li>
+                <li>1. Exportar datos (Meta/Google).</li>
+                <li>2. Limpieza y estructura (Sheets/Excel).</li>
+                <li>3. Vistas por objetivo.</li>
+                <li>4. Dashboard (Power BI).</li>
                 <li>5. Recomendaciones accionables.</li>
               </ul>
             </article>
           </aside>
         </div>
 
-        <div class="metrics-table data-case">
-          <h3>Caso práctico: optimización de campaña</h3>
-          <p class="metrics-hint">Ejemplo basado en campañas reales de cursos.</p>
-
-          <div class="metrics-table-wrap" role="region" aria-label="Comparación antes y después de optimización">
-            <table>
-              <thead>
-                <tr>
-                  <th>Estado</th>
-                  <th>CPL</th>
-                  <th>CTR</th>
-                  <th>ROAS</th>
-                  <th>Acciones clave</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Antes de optimizar</td>
-                  <td>$75.00</td>
-                  <td>1.9%</td>
-                  <td>1.8x</td>
-                  <td>Segmentación amplia, creativos genéricos, landing sin pruebas A/B.</td>
-                </tr>
-                <tr>
-                  <td>Después de optimizar</td>
-                  <td>$45.00</td>
-                  <td>4.0%</td>
-                  <td>4.2x</td>
-                  <td>Refinar públicos, nuevos creativos, mejoras de formulario y A/B en landing.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Gráficas -->
-        <div class="charts-section ai-analytics">
+        <section class="charts-section ai-analytics">
           <div class="ai-header">
             <h3>Ejemplos de gráficas generadas con Python</h3>
             <div class="ai-chip" aria-label="Simulación de análisis con IA">
@@ -456,29 +328,20 @@
             </div>
           </div>
 
-          <p class="metrics-hint">
-            Estas gráficas son ejemplos con Python (pandas + matplotlib) exportadas a imagen para reportes.
-          </p>
-
-          <p class="ai-status">
-            Procesando datos
-            <span class="ai-dots"><span>.</span><span>.</span><span>.</span></span>
-          </p>
+          <p class="metrics-hint">Ejemplos exportados a imagen para reportes y dashboards.</p>
 
           <div class="charts-grid">
             <figure class="chart-card">
               <img src="assets/images/charts/cpl_evolucion.png" alt="Evolución del CPL por mes" loading="lazy">
               <figcaption>Evolución del <strong>CPL</strong> por mes.</figcaption>
             </figure>
-
             <figure class="chart-card">
               <img src="assets/images/charts/roas_campanas.png" alt="ROAS por campañas" loading="lazy">
               <figcaption>Comparativa de <strong>ROAS</strong> por campaña.</figcaption>
             </figure>
-
             <figure class="chart-card">
               <img src="assets/images/charts/ctr_dispositivos.png" alt="CTR por dispositivo" loading="lazy">
-              <figcaption><strong>CTR</strong> por dispositivo (móvil vs escritorio).</figcaption>
+              <figcaption><strong>CTR</strong> por dispositivo.</figcaption>
             </figure>
           </div>
 
@@ -487,44 +350,33 @@
             <pre><code class="code-block">import pandas as pd
 import matplotlib.pyplot as plt
 
-data = {
-    "mes": ["Ene", "Feb", "Mar", "Abr", "May", "Jun"],
-    "cpl_antes": [75, 72, 68, 62, 58, 55],
-    "cpl_despues": [55, 52, 50, 48, 46, 45],
-}
-
+data = {"mes":["Ene","Feb","Mar","Abr","May","Jun"],"cpl_antes":[75,72,68,62,58,55],"cpl_despues":[55,52,50,48,46,45]}
 df = pd.DataFrame(data)
 
-plt.figure(figsize=(6, 4))
+plt.figure(figsize=(6,4))
 plt.plot(df["mes"], df["cpl_antes"], marker="o", label="Antes")
 plt.plot(df["mes"], df["cpl_despues"], marker="o", label="Después")
 plt.title("Evolución del CPL por mes")
-plt.xlabel("Mes")
-plt.ylabel("CPL ($)")
-plt.legend()
-plt.tight_layout()
+plt.xlabel("Mes"); plt.ylabel("CPL ($)")
+plt.legend(); plt.tight_layout()
 plt.savefig("assets/images/charts/cpl_evolucion.png", dpi=120)
 plt.close()</code></pre>
           </details>
-        </div>
-
+        </section>
       </div>
     </section>
 
-    <!-- Red neuronal -->
+    <!-- Neural -->
     <section id="neural-output" class="section reveal neural-section">
       <div class="container grid-2">
         <div class="neural-copy">
           <h2>Ideas conectadas por datos</h2>
-          <p>
-            Combino desarrollo web, marketing de rendimiento y análisis de datos para generar ideas accionables.
-          </p>
+          <p>Combino desarrollo web, performance y analítica para generar ideas accionables (no PDFs eternos 😄).</p>
           <div class="neural-phrases">
             <span class="neural-phrase-label">Output de la IA:</span>
             <p id="neuralPhrase" class="neural-phrase-line">Configurando red neuronal…</p>
           </div>
         </div>
-
         <div class="neural-visual">
           <canvas id="neuralCanvas" aria-hidden="true"></canvas>
         </div>
@@ -537,14 +389,14 @@ plt.close()</code></pre>
         <h2>Proyectos</h2>
 
         <div class="filters" role="tablist" aria-label="Filtros de proyectos">
-          <button class="chip is-active" data-filter="all" role="tab" aria-selected="true">Todos</button>
-          <button class="chip" data-filter="web" role="tab" aria-selected="false">Web</button>
-          <button class="chip" data-filter="marketing" role="tab" aria-selected="false">Marketing</button>
-          <button class="chip" data-filter="diseño" role="tab" aria-selected="false">Diseño</button>
+          <button class="chip is-active" data-filter="all" role="tab" aria-selected="true" type="button">Todos</button>
+          <button class="chip" data-filter="web" role="tab" aria-selected="false" type="button">Web</button>
+          <button class="chip" data-filter="marketing" role="tab" aria-selected="false" type="button">Marketing</button>
+          <!-- ✅ Usamos "diseno" (ASCII) para evitar bugs -->
+          <button class="chip" data-filter="diseno" role="tab" aria-selected="false" type="button">Diseño</button>
         </div>
 
         <div class="projects-grid">
-
           <article class="project-card" data-tags="web" data-title="Landing SEO" data-desc="Landing SEO optimizada con Core Web Vitals." data-demo="#" data-repo="#">
             <img src="assets/images/seo.png" alt="Landing SEO">
             <div class="project-content">
@@ -552,7 +404,7 @@ plt.close()</code></pre>
               <p>Core Web Vitals, semántica y microdatos.</p>
               <div class="project-tags"><span>HTML</span><span>CSS</span><span>SEO</span></div>
               <div class="project-actions">
-                <button class="btn sm open-modal"><i class="fa-regular fa-image"></i> Ver</button>
+                <button class="btn sm open-modal" type="button"><i class="fa-regular fa-image"></i> Ver</button>
                 <a class="btn sm ghost" href="#" target="_blank" rel="noopener">Demo</a>
               </div>
             </div>
@@ -565,7 +417,7 @@ plt.close()</code></pre>
               <p>KPIs de marketing, cohortes y ROAS.</p>
               <div class="project-tags"><span>JS</span><span>UX</span></div>
               <div class="project-actions">
-                <button class="btn sm open-modal">Ver</button>
+                <button class="btn sm open-modal" type="button">Ver</button>
                 <a class="btn sm ghost" href="#" target="_blank" rel="noopener">Demo</a>
               </div>
             </div>
@@ -575,29 +427,29 @@ plt.close()</code></pre>
             <img src="assets/images/sem.png" alt="Campaña SEM">
             <div class="project-content">
               <h3>Campaña SEM</h3>
-              <p>Google Ads, analítica y optimización.</p>
+              <p>Google Ads, SKAGs y analítica.</p>
               <div class="project-tags"><span>SEM</span><span>KPIs</span></div>
               <div class="project-actions">
-                <button class="btn sm open-modal">Ver</button>
+                <button class="btn sm open-modal" type="button">Ver</button>
                 <a class="btn sm ghost" href="#" target="_blank" rel="noopener">Demo</a>
               </div>
             </div>
           </article>
 
-          <article class="project-card" data-tags="diseño" data-title="Brand System" data-desc="Guía de estilo y componentes." data-demo="#" data-repo="#">
+          <article class="project-card" data-tags="diseno" data-title="Brand System" data-desc="Guía de estilo y componentes." data-demo="#" data-repo="#">
             <img src="assets/images/brand.png" alt="Brand System">
             <div class="project-content">
               <h3>Brand System</h3>
               <p>Identidad visual escalable.</p>
               <div class="project-tags"><span>Branding</span></div>
               <div class="project-actions">
-                <button class="btn sm open-modal">Ver</button>
+                <button class="btn sm open-modal" type="button">Ver</button>
                 <a class="btn sm ghost" href="#" target="_blank" rel="noopener">Demo</a>
               </div>
             </div>
           </article>
 
-          <!-- ESTE ERA EL QUE ESTABA ROTO (tags sin cerrar + duplicado) -->
+          <!-- ✅ E-commerce arreglado (sin card “dentro” de otra) -->
           <article class="project-card" data-tags="web" data-title="E-commerce" data-desc="Tienda con checkout optimizado." data-demo="#" data-repo="#">
             <img src="assets/images/ecommerce.png" alt="E-commerce">
             <div class="project-content">
@@ -605,7 +457,7 @@ plt.close()</code></pre>
               <p>Checkout, performance y tracking.</p>
               <div class="project-tags"><span>UX</span><span>Perf</span></div>
               <div class="project-actions">
-                <button class="btn sm open-modal">Ver</button>
+                <button class="btn sm open-modal" type="button">Ver</button>
                 <a class="btn sm ghost" href="#" target="_blank" rel="noopener">Demo</a>
               </div>
             </div>
@@ -618,21 +470,20 @@ plt.close()</code></pre>
               <p>Flujos, segmentación y reportes.</p>
               <div class="project-tags"><span>CRM</span><span>Automation</span></div>
               <div class="project-actions">
-                <button class="btn sm open-modal">Ver</button>
+                <button class="btn sm open-modal" type="button">Ver</button>
                 <a class="btn sm ghost" href="#" target="_blank" rel="noopener">Demo</a>
               </div>
             </div>
           </article>
-
         </div>
       </div>
     </section>
 
-    <!-- Evolución de diseños -->
+    <!-- Diseños -->
     <section id="disenos" class="section reveal alt">
       <div class="container">
         <h2>Evolución de diseños</h2>
-        <p>Del boceto a la versión final lista para el cliente.</p>
+        <p>De boceto a versión final lista para el cliente.</p>
 
         <div class="designs-grid">
           <article class="design-card">
@@ -643,6 +494,7 @@ plt.close()</code></pre>
 
             <div class="design-carousel" data-design="wellness-logo">
               <button class="carousel-btn prev" type="button" aria-label="Ver versión anterior">‹</button>
+
               <div class="carousel-viewport">
                 <div class="carousel-track">
                   <img src="assets/images/talla_grand.jpg" alt="Boceto inicial del logo Wellness Cursos" class="is-active">
@@ -650,6 +502,7 @@ plt.close()</code></pre>
                   <img src="assets/images/center_gym_fb_luxury_1080x1350.png" alt="Versión final del logo Wellness Cursos">
                 </div>
               </div>
+
               <button class="carousel-btn next" type="button" aria-label="Ver siguiente versión">›</button>
             </div>
 
@@ -659,56 +512,16 @@ plt.close()</code></pre>
               <button class="dot" type="button" role="tab" aria-selected="false" data-index="2">Final</button>
             </div>
           </article>
-
-          <article class="design-card">
-            <header class="design-header">
-              <h3>Banner para campaña en redes sociales</h3>
-              <p>Composición, color y retoque final.</p>
-            </header>
-
-            <div class="design-carousel" data-design="banner-masaje">
-              <button class="carousel-btn prev" type="button" aria-label="Ver versión anterior">‹</button>
-              <div class="carousel-viewport">
-                <div class="carousel-track">
-                  <img src="assets/images/g-1.jpg" alt="Versión inicial del banner" class="is-active">
-                  <img src="assets/images/g-2.png" alt="Versión intermedia del banner">
-                  <img src="assets/images/g-3.png" alt="Versión final del banner">
-                </div>
-              </div>
-              <button class="carousel-btn next" type="button" aria-label="Ver siguiente versión">›</button>
-            </div>
-
-            <div class="carousel-dots" role="tablist" aria-label="Etapas del diseño del banner">
-              <button class="dot is-active" type="button" role="tab" aria-selected="true" data-index="0">Boceto</button>
-              <button class="dot" type="button" role="tab" aria-selected="false" data-index="1">Color</button>
-              <button class="dot" type="button" role="tab" aria-selected="false" data-index="2">Final</button>
-            </div>
-          </article>
         </div>
       </div>
     </section>
 
     <!-- Videos -->
-    <section id="videos" class="section reveal alt">
+    <section id="videos" class="section reveal">
       <div class="container">
         <h2>Videos</h2>
-        <p>Algunos videos editados con Adobe Premiere Pro para campañas, cursos y redes sociales.</p>
 
-        <div class="video-grid">
-          <article class="video-card">
-            <h3>Promo curso online</h3>
-            <div class="video-frame">
-              <iframe
-                src="https://www.youtube.com/embed/VIDEO_ID_1"
-                title="Promo curso online"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>
-            </div>
-            <p class="video-desc">Pieza promocional enfocada en experiencia del alumno.</p>
-          </article>
-
+        <div class="videos-grid">
           <article class="video-card">
             <h3>Reel para negocio local</h3>
             <div class="video-frame">
@@ -718,9 +531,10 @@ plt.close()</code></pre>
                 loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>
+                allowfullscreen>
+              </iframe>
             </div>
-            <p class="video-desc">Reel vertical para Instagram/TikTok.</p>
+            <p class="video-desc">Reel vertical para Instagram/TikTok, mostrando ambiente y propuesta.</p>
           </article>
 
           <article class="video-card">
@@ -731,18 +545,19 @@ plt.close()</code></pre>
                 Tu navegador no soporta el video HTML5.
               </video>
             </div>
-            <p class="video-desc">Intro animada para módulos del curso.</p>
+            <p class="video-desc">Intro animada para módulos del curso con transiciones suaves.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Contacto (solo UNO) -->
+    <!-- Contacto -->
     <section id="contacto" class="section reveal alt">
       <div class="container grid-2">
         <div>
           <h2>Contacto</h2>
-          <p>¿Tienes un proyecto en mente? Escríbeme y construyamos algo increíble.</p>
+          <p>¿Tienes un proyecto en mente? Escríbeme y lo armamos pro.</p>
+
           <ul class="contact-list">
             <li><i class="fa-solid fa-envelope"></i> <a href="mailto:tonathiupalma@gmail.com">tonathiupalma@gmail.com</a></li>
             <li><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/52XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp · Escríbeme directo</a></li>
@@ -764,53 +579,272 @@ plt.close()</code></pre>
             <small class="error" aria-live="polite"></small>
           </label>
 
-          <label class="full">
+          <label>
             <span>Mensaje</span>
-            <textarea name="message" rows="5" required placeholder="Cuéntame sobre tu proyecto"></textarea>
+            <textarea name="message" rows="5" required placeholder="Cuéntame qué necesitas…"></textarea>
             <small class="error" aria-live="polite"></small>
           </label>
 
-          <button type="submit" class="btn full">
-            <i class="fa-solid fa-paper-plane"></i> Enviar mensaje
-          </button>
+          <button class="btn" type="submit"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+          <p class="form-status" aria-live="polite"></p>
         </form>
       </div>
     </section>
 
   </main>
 
-  <button id="toTop" class="to-top" aria-label="Ir arriba" hidden>
-    <i class="fa-solid fa-arrow-up"></i>
-  </button>
+  <!-- Modal -->
+  <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Vista del proyecto">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-panel" role="document">
+      <button class="modal-close" type="button" aria-label="Cerrar" data-close="true">×</button>
 
-  <!-- Modal de proyectos (sin duplicados) -->
-  <dialog class="modal" id="projectModal" aria-label="Vista de proyecto">
-    <div class="modal-card" role="document">
-      <div class="modal-head">
-        <h4 class="modal-title">Título del proyecto</h4>
-        <button class="modal-close" aria-label="Cerrar">×</button>
-      </div>
       <div class="modal-body">
-        <img class="modal-img" src="" alt="" />
-        <p class="modal-desc">Descripción del proyecto…</p>
+        <h3 id="modalTitle">Proyecto</h3>
+        <p id="modalDesc">Descripción</p>
+
+        <div class="modal-media">
+          <img id="modalImg" src="assets/images/og_preview.png" alt="Vista previa del proyecto">
+        </div>
+
         <div class="modal-actions">
-          <a href="#" target="_blank" rel="noopener" class="btn">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver demo
-          </a>
-          <a href="#" target="_blank" rel="noopener" class="btn ghost">
-            <i class="fa-brands fa-github"></i> Repositorio
-          </a>
+          <a id="modalDemo" class="btn sm ghost" href="#" target="_blank" rel="noopener">Demo</a>
+          <a id="modalRepo" class="btn sm ghost" href="#" target="_blank" rel="noopener">Repo</a>
         </div>
       </div>
     </div>
-  </dialog>
+  </div>
 
   <footer class="site-footer">
     <div class="container">
-      <small>© <span id="year"></span> Tonathiu Palma. Todos los derechos reservados.</small>
+      <p>© <span id="year"></span> Tonathiu Palma · Hecho con café, KPIs y un poquito de magia.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+  // ===== Helpers =====
+  const $ = (q, ctx=document) => ctx.querySelector(q);
+  const $$ = (q, ctx=document) => Array.from(ctx.querySelectorAll(q));
+
+  // ===== Año =====
+  $("#year").textContent = new Date().getFullYear();
+
+  // ===== Menú =====
+  const navToggle = $(".nav-toggle");
+  const nav = $("#site-nav");
+  if (navToggle && nav) {
+    navToggle.addEventListener("click", () => {
+      const open = navToggle.getAttribute("aria-expanded") === "true";
+      navToggle.setAttribute("aria-expanded", String(!open));
+      nav.classList.toggle("is-open", !open);
+    });
+    // Cerrar al click en link (mobile)
+    $$("a", nav).forEach(a => a.addEventListener("click", () => {
+      navToggle.setAttribute("aria-expanded", "false");
+      nav.classList.remove("is-open");
+    }));
+  }
+
+  // ===== Tema (dark/light) =====
+  const themeBtn = $("#themeBtn");
+  const THEME_KEY = "tp_theme";
+  const applyTheme = (t) => {
+    document.documentElement.dataset.theme = t;
+    themeBtn?.setAttribute("aria-pressed", t === "dark" ? "true" : "false");
+  };
+  const saved = localStorage.getItem(THEME_KEY);
+  if (saved) applyTheme(saved);
+  themeBtn?.addEventListener("click", () => {
+    const current = document.documentElement.dataset.theme || "dark";
+    const next = current === "dark" ? "light" : "dark";
+    localStorage.setItem(THEME_KEY, next);
+    applyTheme(next);
+  });
+
+  // ===== Reveal on scroll =====
+  const revealEls = $$(".reveal");
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add("is-visible");
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+
+  // ===== Filtros de proyectos =====
+  const chips = $$(".filters .chip");
+  const cards = $$(".project-card");
+  const setActiveChip = (btn) => {
+    chips.forEach(c => c.classList.remove("is-active"));
+    chips.forEach(c => c.setAttribute("aria-selected", "false"));
+    btn.classList.add("is-active");
+    btn.setAttribute("aria-selected", "true");
+  };
+  chips.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const filter = btn.dataset.filter;
+      setActiveChip(btn);
+      cards.forEach(card => {
+        const tags = (card.dataset.tags || "").split(",").map(s => s.trim());
+        const show = filter === "all" ? true : tags.includes(filter);
+        card.style.display = show ? "" : "none";
+      });
+    });
+  });
+
+  // ===== Modal de proyectos =====
+  const modal = $("#projectModal");
+  const modalTitle = $("#modalTitle");
+  const modalDesc = $("#modalDesc");
+  const modalImg = $("#modalImg");
+  const modalDemo = $("#modalDemo");
+  const modalRepo = $("#modalRepo");
+
+  const openModal = (card) => {
+    modalTitle.textContent = card.dataset.title || "Proyecto";
+    modalDesc.textContent = card.dataset.desc || "";
+    const img = $("img", card);
+    if (img) {
+      modalImg.src = img.getAttribute("src");
+      modalImg.alt = img.getAttribute("alt") || "Vista previa del proyecto";
+    }
+    modalDemo.href = card.dataset.demo || "#";
+    modalRepo.href = card.dataset.repo || "#";
+
+    modal.setAttribute("aria-hidden", "false");
+    modal.classList.add("is-open");
+    document.body.classList.add("modal-open");
+  };
+
+  const closeModal = () => {
+    modal.setAttribute("aria-hidden", "true");
+    modal.classList.remove("is-open");
+    document.body.classList.remove("modal-open");
+  };
+
+  $$(".open-modal").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".project-card");
+      if (card) openModal(card);
+    });
+  });
+
+  modal?.addEventListener("click", (e) => {
+    const t = e.target;
+    if (t && (t.dataset.close === "true" || t.classList.contains("modal-backdrop"))) closeModal();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal?.classList.contains("is-open")) closeModal();
+  });
+
+  // ===== Carruseles de diseños =====
+  $$(".design-carousel").forEach((carousel) => {
+    const track = $(".carousel-track", carousel);
+    const imgs = $$("img", track);
+    const dots = carousel.parentElement?.querySelectorAll(".carousel-dots .dot") || [];
+    let idx = imgs.findIndex(i => i.classList.contains("is-active"));
+    if (idx < 0) idx = 0;
+
+    const render = () => {
+      imgs.forEach((img, i) => img.classList.toggle("is-active", i === idx));
+      dots.forEach((d, i) => {
+        d.classList.toggle("is-active", i === idx);
+        d.setAttribute("aria-selected", i === idx ? "true" : "false");
+      });
+      // Si tu CSS usa transform en track, descomenta:
+      // track.style.transform = `translateX(${-idx * 100}%)`;
+    };
+
+    $(".prev", carousel)?.addEventListener("click", () => { idx = (idx - 1 + imgs.length) % imgs.length; render(); });
+    $(".next", carousel)?.addEventListener("click", () => { idx = (idx + 1) % imgs.length; render(); });
+    dots.forEach((d) => d.addEventListener("click", () => { idx = Number(d.dataset.index || 0); render(); }));
+
+    render();
+  });
+
+  // ===== Form validación simple =====
+  const form = $(".contact-form");
+  form?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let ok = true;
+
+    $$("label", form).forEach(lbl => {
+      const input = $("input, textarea", lbl);
+      const err = $(".error", lbl);
+      if (!input || !err) return;
+
+      err.textContent = "";
+      const value = (input.value || "").trim();
+
+      if (input.hasAttribute("required") && !value) {
+        err.textContent = "Este campo es obligatorio.";
+        ok = false;
+      }
+
+      if (ok && input.type === "email") {
+        const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+        if (!valid) { err.textContent = "Email no válido."; ok = false; }
+      }
+    });
+
+    const status = $(".form-status", form);
+    if (ok) {
+      status.textContent = "Listo ✅ (aquí conectas tu backend o Formspree).";
+      form.reset();
+    } else {
+      status.textContent = "Revisa los campos marcados.";
+    }
+  });
+
+  // ===== Canvas: animación ligera (opcional) =====
+  function animateDots(canvasId, dotsCount=35) {
+    const c = document.getElementById(canvasId);
+    if (!c) return;
+    const ctx = c.getContext("2d");
+    const resize = () => {
+      c.width = c.clientWidth || window.innerWidth;
+      c.height = c.clientHeight || 260;
+    };
+    resize();
+    window.addEventListener("resize", resize);
+
+    const dots = Array.from({length:dotsCount}).map(() => ({
+      x: Math.random()*c.width,
+      y: Math.random()*c.height,
+      vx: (Math.random()-.5)*0.6,
+      vy: (Math.random()-.5)*0.6
+    }));
+
+    function tick() {
+      ctx.clearRect(0,0,c.width,c.height);
+      dots.forEach(d => {
+        d.x += d.vx; d.y += d.vy;
+        if (d.x < 0 || d.x > c.width) d.vx *= -1;
+        if (d.y < 0 || d.y > c.height) d.vy *= -1;
+        ctx.beginPath();
+        ctx.arc(d.x,d.y,1.3,0,Math.PI*2);
+        ctx.fill();
+      });
+      requestAnimationFrame(tick);
+    }
+    tick();
+  }
+  animateDots("heroCanvas", 40);
+  animateDots("neuralCanvas", 55);
+
+  // ===== Neural phrase rotator =====
+  const phraseEl = $("#neuralPhrase");
+  const phrases = [
+    "IA · Inteligencia · MK · Community",
+    "ROAS ↑ · CPL ↓ · CTR ↑ · CAC controlado",
+    "Creativo + Copy + Data = escala",
+    "Landing rápida + tracking fino = oro"
+  ];
+  let p = 0;
+  setInterval(() => {
+    if (!phraseEl) return;
+    p = (p + 1) % phrases.length;
+    phraseEl.textContent = phrases[p];
+  }, 2200);
+  </script>
 </body>
 </html>
