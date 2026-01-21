@@ -116,6 +116,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if (demo) demo.href = card.dataset.demo || "#";
         if (repo) repo.href = card.dataset.repo || "#";
 
+        // Hide empty actions (so it never looks like a template)
+        const isEmptyHref = (h) => !h || h === "#" || h === "javascript:void(0)";
+        if (demo) demo.style.display = isEmptyHref(demo.getAttribute("href")) ? "none" : "inline-flex";
+        if (repo) repo.style.display = isEmptyHref(repo.getAttribute("href")) ? "none" : "inline-flex";
+
         if (typeof modal.showModal === "function") modal.showModal();
       });
     });
@@ -191,34 +196,77 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(0);
   });
 
-  // Form validation (client side)
-  const form = $(".contact-form");
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      let ok = true;
 
-      form.querySelectorAll("input[required], textarea[required]").forEach((field) => {
-        const error = field.parentElement?.querySelector(".error") || null;
 
-        if (!field.value.trim()) {
-          ok = false;
-          if (error) error.textContent = "Este campo es obligatorio.";
-        } else if (field.type === "email" && !/^\S+@\S+\.\S+$/.test(field.value)) {
-          ok = false;
-          if (error) error.textContent = "Ingresa un email válido.";
-        } else {
-          if (error) error.textContent = "";
-        }
-      });
+// Hide placeholder / empty links (so the portfolio never looks like a template)
+const hideIfEmptyLink = (a) => {
+  if (!a) return;
+  const href = (a.getAttribute("href") || "").trim();
+  if (!href || href === "#" || href === "javascript:void(0)") {
+    a.style.display = "none";
+  }
+};
 
-      if (ok) {
-        alert("¡Gracias! Me pondré en contacto.");
-        form.reset();
+// Hide demo buttons with empty hrefs
+$$(".project-card a.btn").forEach((a) => hideIfEmptyLink(a));
+// Hide modal buttons if empty
+["#modalDemo", "#modalRepo"].forEach((sel) => hideIfEmptyLink($(sel)));
+
+// Contact form -> opens the user's email client (professional for static sites)
+const form = $(".contact-form");
+if (form) {
+  const status = $(".form-status", form) || null;
+
+  const setStatus = (msg, isOk = true) => {
+    if (!status) return;
+    status.textContent = msg;
+    status.style.color = isOk ? "" : "#b42318";
+  };
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    let ok = true;
+
+    form.querySelectorAll("input[required], textarea[required]").forEach((field) => {
+      const error = field.parentElement?.querySelector(".error") || null;
+
+      if (!field.value.trim()) {
+        ok = false;
+        if (error) error.textContent = "Este campo es obligatorio.";
+      } else if (field.type === "email" && !/^\S+@\S+\.\S+$/.test(field.value)) {
+        ok = false;
+        if (error) error.textContent = "Ingresa un email válido.";
       } else {
-        e.preventDefault();
+        if (error) error.textContent = "";
       }
     });
-  }
+
+    if (!ok) {
+      setStatus("Revisa los campos marcados para poder enviar.", false);
+      return;
+    }
+
+    const name = (form.querySelector('input[name="name"]')?.value || "").trim();
+    const email = (form.querySelector('input[name="email"]')?.value || "").trim();
+    const message = (form.querySelector('textarea[name="message"]')?.value || "").trim();
+
+    const subject = encodeURIComponent(`Contacto desde Portafolio — ${name || "Nuevo mensaje"}`);
+    const body = encodeURIComponent(
+      `Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}\n\n— Enviado desde mi portafolio`
+    );
+
+    setStatus("Abriendo tu correo para enviar el mensaje…");
+
+    window.location.href = `mailto:tonathiupalma@gmail.com?subject=${subject}&body=${body}`;
+
+    // Optional: reset after opening mail client
+    setTimeout(() => {
+      form.reset();
+      setStatus("Listo. Si no se abrió tu correo, copia el email y envíame el mensaje manualmente.");
+    }, 600);
+  });
+}
 });
 
 // ===== Ocultar "Procesando datos..." después de que la sección IA sea visible =====
@@ -892,3 +940,44 @@ document.addEventListener("DOMContentLoaded", () => {
     start();
   }
 });
+
+
+// --- Videos: populate mini cards (hide empty) ---
+(function initMoreVideos(){
+  const cards = document.querySelectorAll('.video-mini-card');
+  if(!cards || !cards.length) return;
+
+  cards.forEach(card => {
+    const yt = (card.getAttribute('data-yt') || '').trim();
+    const title = (card.getAttribute('data-title') || '').trim();
+    const desc = (card.getAttribute('data-desc') || '').trim();
+
+    // Fill text
+    const h4 = card.querySelector('.video-mini-body h4');
+    const p = card.querySelector('.video-mini-body p');
+    if(h4) h4.textContent = title || 'Video';
+    if(p) p.textContent = desc || '';
+
+    // If no YouTube ID, remove the card (keeps the portfolio clean)
+    if(!yt){
+      card.remove();
+      return;
+    }
+
+    // Build embed URL
+    const iframe = card.querySelector('iframe');
+    if(iframe){
+      iframe.src = `https://www.youtube.com/embed/${yt}?rel=0&modestbranding=1&playsinline=1`;
+      iframe.setAttribute('referrerpolicy','strict-origin-when-cross-origin');
+      iframe.setAttribute('loading','lazy');
+      iframe.setAttribute('allowfullscreen','');
+    }
+  });
+
+  // If all cards removed, remove the whole block
+  const grid = document.querySelector('.video-more-grid');
+  if(grid && !grid.querySelector('.video-mini-card')){
+    const wrap = document.querySelector('.video-more');
+    if(wrap) wrap.remove();
+  }
+})();
