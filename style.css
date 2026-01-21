@@ -1058,3 +1058,68 @@ html[data-theme="dark"]{
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Grid de videos */
+.video-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+/* Tarjeta */
+.video-card{
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* Frame responsive 16:9 */
+.video-frame{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+  margin-top: 10px;
+}
+
+/* Iframe y video al 100% del frame */
+.video-frame iframe,
+.video-frame video{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+@supports not (aspect-ratio: 16 / 9){
+  .video-frame{ padding-top: 56.25%; }
+}
+
+
+/* Textos */
+.video-card h3{
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.video-desc{
+  margin-top: 12px;
+  opacity: 0.85;
+  line-height: 1.35;
+  font-size: 0.95rem;
+}
+
+/* Hover sutil */
+.video-card:hover{
+  transform: translateY(-2px);
+  transition: transform .2s ease;
+}
+
